@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/serial-position-effect/static/js/main.c617d789.chunk.js",
-    "main.js.map": "/serial-position-effect/static/js/main.c617d789.chunk.js.map",
+    "main.js": "/serial-position-effect/static/js/main.2b9413e3.chunk.js",
+    "main.js.map": "/serial-position-effect/static/js/main.2b9413e3.chunk.js.map",
     "runtime-main.js": "/serial-position-effect/static/js/runtime-main.3f7a69d1.js",
     "runtime-main.js.map": "/serial-position-effect/static/js/runtime-main.3f7a69d1.js.map",
     "static/js/2.fb880f55.chunk.js": "/serial-position-effect/static/js/2.fb880f55.chunk.js",
     "static/js/2.fb880f55.chunk.js.map": "/serial-position-effect/static/js/2.fb880f55.chunk.js.map",
     "index.html": "/serial-position-effect/index.html",
-    "precache-manifest.1727d84aa9b4a970dacdb616a73e7074.js": "/serial-position-effect/precache-manifest.1727d84aa9b4a970dacdb616a73e7074.js",
+    "precache-manifest.f5ad68f63c73b2f2fa8935be5c933f4d.js": "/serial-position-effect/precache-manifest.f5ad68f63c73b2f2fa8935be5c933f4d.js",
     "service-worker.js": "/serial-position-effect/service-worker.js",
     "static/js/2.fb880f55.chunk.js.LICENSE.txt": "/serial-position-effect/static/js/2.fb880f55.chunk.js.LICENSE.txt",
     "static/media/memory.png": "/serial-position-effect/static/media/memory.b17ce998.png"
@@ -15,6 +15,6 @@
   "entrypoints": [
     "static/js/runtime-main.3f7a69d1.js",
     "static/js/2.fb880f55.chunk.js",
-    "static/js/main.c617d789.chunk.js"
+    "static/js/main.2b9413e3.chunk.js"
   ]
 }

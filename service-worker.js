@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/serial-position-effect/precache-manifest.1727d84aa9b4a970dacdb616a73e7074.js"
+  "/serial-position-effect/precache-manifest.f5ad68f63c73b2f2fa8935be5c933f4d.js"
 );
 
 self.addEventListener('message', (event) => {

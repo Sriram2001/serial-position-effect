@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ffed45bbd8f579509121328e0c49190e",
+    "revision": "8547e83fc2cd7b317bc02f996f931901",
     "url": "/serial-position-effect/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/serial-position-effect/static/js/2.fb880f55.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4bfe84dba1032af4df63",
-    "url": "/serial-position-effect/static/js/main.c617d789.chunk.js"
+    "revision": "df70e96a391c5a43f65c",
+    "url": "/serial-position-effect/static/js/main.2b9413e3.chunk.js"
   },
   {
     "revision": "ee742c3ba88ab9d0bacc",
