@@ -23,7 +23,7 @@ export default function RememberStage({ animalsList, next }) {
 
   return (
     <div className="container">
-      <h1 className="my-5  text-center">Remember the following animals:</h1>
+      <h1 className="my-3 text-center">Remember the following animals:</h1>
       <div className="row ml-0">
         <div className="col-md-6 text-center h-100 my-auto">
           <h4>

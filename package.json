@@ -2,8 +2,13 @@
   "name": "serial-position-effect",
   "version": "1.0.0",
   "description": "",
-  "keywords": ["React", "Serial Position Effect", "PWA"],
+  "keywords": [
+    "React",
+    "Serial Position Effect",
+    "PWA"
+  ],
   "main": "src/index.js",
+  "homepage": "https://sriram2001.github.io/serial-position-effect/",
   "dependencies": {
     "react": "17.0.0",
     "react-albus": "2.0.0",
@@ -11,13 +16,16 @@
     "react-scripts": "3.4.3"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",
