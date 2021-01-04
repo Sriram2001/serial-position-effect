@@ -5,20 +5,20 @@ export default function Finish({ selectedAnimals, allAnimals, next }) {
   let outside = 0;
   let inside = 0;
   allAnimals.forEach((animal, idx) => {
-    if (!selectedAnimals.includes(animal)) {
+    if (selectedAnimals.includes(animal)) {
       if (idx >= 3 && idx < 6) inside += 1;
       else outside += 1;
     }
   });
 
-  if (inside > outside) {
+  if (inside < outside) {
     message = (
       <p>
         You have recalled more elements in the boundary of the array than in the
         interior. So, the serial position has been effective.
       </p>
     );
-  } else if (outside > inside) {
+  } else if (outside !== inside) {
     message = (
       <p>
         You have recalled more elements in the interior of the array than in the
