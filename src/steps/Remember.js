@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function RememberStage({ animalsList, next }) {
-  const [time, setTime] = React.useState(8);
+export default function RememberStage({ animalsList, next, maxTime }) {
+  const [time, setTime] = React.useState(maxTime);
   React.useEffect(() => {
     let timer = null;
     if (time > 0) {

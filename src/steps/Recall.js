@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import SpeechRecognition, {
+  useSpeechRecognition
+} from "react-speech-recognition";
+import BootstrapSwitchButton from "bootstrap-switch-button-react";
 
 export default function Recall({
   addAnimal,
@@ -6,6 +10,44 @@ export default function Recall({
   animalsList,
   selectedAnimals
 }) {
+  const [listening, setListening] = useState(false);
+
+  const commands = animalsList.map((a) => {
+    return {
+      command: `${a}`,
+      callback: (animal) => {
+        addAnimal(a);
+      },
+      isFuzzyMatch: true
+    };
+  });
+
+  let toggle = "";
+
+  useSpeechRecognition({ commands });
+  if (SpeechRecognition.browserSupportsSpeechRecognition()) {
+    toggle = (
+      <>
+        <p className="h4 mr-2">Speech Recognition:</p>
+
+        <BootstrapSwitchButton
+          checked={listening}
+          onlabel="ON"
+          offlabel="OFF"
+          onstyle="success"
+          onChange={(checked) => {
+            if (checked) {
+              SpeechRecognition.startListening({ continuous: true });
+            } else {
+              SpeechRecognition.stopListening();
+            }
+            setListening(checked);
+          }}
+        />
+      </>
+    );
+  }
+
   return (
     <div className="container">
       <h1 className="text-center my-3">Select the animals: </h1>
@@ -13,6 +55,8 @@ export default function Recall({
         There is a list of animals below. Select all of the ones that you
         remember from the list shown before.
       </p>
+
+      <div className="row mb-2 d-flex justify-content-center">{toggle}</div>
       <div className="row ml-0">
         <ul className="list-group col-md-6">
           {animalsList.slice(0, animalsList.length / 2).map((animal, idx) => {

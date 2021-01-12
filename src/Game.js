@@ -23,12 +23,18 @@ const skip = ({ step, push }) => {
 };
 
 const Game = () => {
+  const [timeC, setTimeC] = React.useState(8);
   const [selectedAnimals, setSelected] = React.useState([]);
 
   const addAnimal = (animal) => {
     setSelected((list) => {
       if (list.includes(animal)) {
         return list.filter((e) => e !== animal);
+      } else if (list.length === animals.length) {
+        alert(
+          "You have selected the maximum number of animals. Please click again on a selected animal to unselect it."
+        );
+        return list;
       } else return [...list, animal];
     });
   };
@@ -38,13 +44,18 @@ const Game = () => {
         <Step
           id="start"
           render={({ next }) => (
-            <Intro next={next} clearList={() => setSelected([])} />
+            <Intro
+              next={next}
+              clearList={() => setSelected([])}
+              timeC={timeC}
+              setTimeC={setTimeC}
+            />
           )}
         />
         <Step
           id="remember"
           render={({ next }) => (
-            <RememberStage next={next} animalsList={animals} />
+            <RememberStage next={next} animalsList={animals} maxTime={timeC} />
           )}
         />
         <Step
